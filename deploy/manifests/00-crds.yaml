@@ -1204,6 +1204,18 @@ spec:
                             resources to solve ACME challenges that use this challenge
                             solver. Only one of 'class' or 'name' may be specified.
                           type: string
+                        ingressTemplate:
+                          description: Optional ingress template used to configure
+                            the ACME challenge solver ingress used for HTTP01 challenges
+                          properties:
+                            metadata:
+                              description: ObjectMeta overrides for the ingress used
+                                to solve HTTP01 challenges. Only the 'labels' and
+                                'annotations' fields may be set. If labels or annotations
+                                overlap with in-built values, the values here will
+                                override the in-built values.
+                              type: object
+                          type: object
                         name:
                           description: The name of the ingress resource that should
                             have ACME challenge solving routes inserted into it in
@@ -2675,6 +2687,19 @@ spec:
                                   use this challenge solver. Only one of 'class' or
                                   'name' may be specified.
                                 type: string
+                              ingressTemplate:
+                                description: Optional ingress template used to configure
+                                  the ACME challenge solver ingress used for HTTP01
+                                  challenges
+                                properties:
+                                  metadata:
+                                    description: ObjectMeta overrides for the ingress
+                                      used to solve HTTP01 challenges. Only the 'labels'
+                                      and 'annotations' fields may be set. If labels
+                                      or annotations overlap with in-built values,
+                                      the values here will override the in-built values.
+                                    type: object
+                                type: object
                               name:
                                 description: The name of the ingress resource that
                                   should have ACME challenge solving routes inserted
@@ -4429,6 +4454,19 @@ spec:
                                   use this challenge solver. Only one of 'class' or
                                   'name' may be specified.
                                 type: string
+                              ingressTemplate:
+                                description: Optional ingress template used to configure
+                                  the ACME challenge solver ingress used for HTTP01
+                                  challenges
+                                properties:
+                                  metadata:
+                                    description: ObjectMeta overrides for the ingress
+                                      used to solve HTTP01 challenges. Only the 'labels'
+                                      and 'annotations' fields may be set. If labels
+                                      or annotations overlap with in-built values,
+                                      the values here will override the in-built values.
+                                    type: object
+                                type: object
                               name:
                                 description: The name of the ingress resource that
                                   should have ACME challenge solving routes inserted
